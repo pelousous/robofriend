@@ -1,0 +1,2 @@
+(this.webpackJsonprobofriends=this.webpackJsonprobofriends||[]).push([[4],{32:function(e,r,o){"use strict";o.r(r);var n=o(0),s=o.n(n);r.default=function(e){return s.a.createElement("div",{style:{overflow:"scroll",border:"5px solid black",height:"800px"}},e.children)}}}]);
+//# sourceMappingURL=4.7701fc34.chunk.js.map
