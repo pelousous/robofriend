@@ -1,2 +1,0 @@
-(this.webpackJsonprobofriends=this.webpackJsonprobofriends||[]).push([[5],{31:function(e,a,r){"use strict";r.r(a);var s=r(0),t=r.n(s);a.default=function(e){e.searchField;var a=e.searchChange;return t.a.createElement("div",{className:"pa2"},t.a.createElement("input",{className:"pa3 ba b--green bg-lightest-blue",type:"search",placeholder:"search robots",onChange:a,"aria-label":"search your robot.."}))}}}]);
-//# sourceMappingURL=5.b751ad67.chunk.js.map
