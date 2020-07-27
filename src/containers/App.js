@@ -1,11 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
 import { connect } from 'react-redux';
-import CardList from '../components/CardList';
-import SearchBox from '../components/SearchBox';
-import Scroll from '../components/Scroll';
 import './App.css';
-
 import { setSearchField, requestRobots } from '../actions';
+
+const CardList = React.lazy(() => import('../components/CardList'));
+const SearchBox = React.lazy(() => import('../components/SearchBox'));
+const Scroll = React.lazy(() => import('../components/Scroll'));
+
+/* import CardList from '../components/CardList';
+import SearchBox from '../components/SearchBox';
+import Scroll from '../components/Scroll'; */
+
+
 
 const mapStateToProps = state => {
     return {
@@ -39,10 +45,12 @@ class App extends Component {
       (
         <div className='tc'>
           <h1 className='f1'>RoboFriends</h1>
-          <SearchBox searchChange={onSearchChange}/>
-          <Scroll>
-            <CardList robots={filteredRobots} />
-          </Scroll>
+          <Suspense fallback={<div>Loading...</div>}>
+            <SearchBox searchChange={onSearchChange}/>
+            <Scroll>
+                <CardList robots={filteredRobots} />
+            </Scroll>
+          </Suspense>
         </div>
       );
   }
